@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#083C6A"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="316dp"
+        android:layout_height="254dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cobralogo1" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="328dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="30dp"
+        android:background="#FDFDFD"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <ImageView
+            android:id="@+id/imgItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            app:srcCompat="@drawable/ps5jpg" />
+
+        <TextView
+            android:id="@+id/txtDes"
+            android:layout_width="297dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center|top"
+            android:text="@string/playstation_world"
+            android:textAlignment="center"
+            android:textColor="#545151"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:backgroundTint="#F6A90B"
+            android:contentDescription="@string/right_button"
+            android:onClick="btRightOnClick"
+            app:icon="@android:drawable/ic_media_play"
+            app:iconGravity="textEnd"
+            app:iconSize="30dp" />
+
+        <Button
+            android:id="@+id/btLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:backgroundTint="#F6A90B"
+            android:contentDescription="@string/left_button"
+            android:onClick="btLeftOnClick"
+            android:rotation="180"
+            app:icon="@android:drawable/ic_media_play"
+            app:iconGravity="textEnd"
+            app:iconSize="30dp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btCart"
+        android:layout_width="74dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="615dp"
+        android:backgroundTint="#F6A90B"
+        android:contentDescription="@string/cart"
+        app:icon="@drawable/grocerystore"
+        app:iconGravity="textStart"
+        app:iconSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btShowList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="btCartOnClick"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btShowList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="615dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/show_list"
+        android:focusable="true"
+        android:onClick="btShowListOnClick"
+        app:backgroundTint="#F6A90B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+    <ListView
+        android:id="@+id/listItems"
+        android:layout_width="350dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="25dp"
+        android:background="#F6F3F3"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btShowList"
+        app:layout_constraintStart_toEndOf="@+id/btCart"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="246dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="617dp"
+        android:backgroundTint="#C8C5C5"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:ems="10"
+        android:hint="@string/search_for_product"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#898888"
+        android:textColorHint="#898888"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btShowList"
+        app:layout_constraintEnd_toStartOf="@+id/btShowList"
+        app:layout_constraintStart_toEndOf="@+id/btCart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

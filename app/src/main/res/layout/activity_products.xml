@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#083C6A"
+    tools:context=".ProductsActivity">
+
+    <Button
+        android:id="@+id/btBack"
+        android:layout_width="58dp"
+        android:layout_height="59dp"
+        android:layout_gravity="bottom|left"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="291dp"
+        android:backgroundTint="#F6A90B"
+        android:contentDescription="@string/left_button"
+        android:onClick="btBackOnClick"
+        android:rotation="180"
+        app:icon="@android:drawable/ic_media_play"
+        app:iconGravity="textEnd"
+        app:iconSize="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btShowList"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btShowList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="297dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="25dp"
+        android:clickable="true"
+        android:contentDescription="@string/show_list"
+        android:focusable="true"
+        android:onClick="btShowListOnClick"
+        app:backgroundTint="#F6A90B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+    <ListView
+        android:id="@+id/listItems"
+        android:layout_width="326dp"
+        android:layout_height="290dp"
+        android:background="#F6F3F3"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/btShowList"
+        app:layout_constraintStart_toEndOf="@+id/btBack"
+        app:layout_constraintTop_toBottomOf="@+id/btShowList" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="308dp"
+        android:layout_height="256dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btShowList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/cobralogo1" />
+
+    <ScrollView
+        android:id="@+id/sclList"
+        android:layout_width="426dp"
+        android:layout_height="602dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="11dp"
+        android:background="#F8F7F7"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listItems">
+
+        <LinearLayout
+            android:id="@+id/productsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="40dp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="426dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:background="#A9A7A7"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Filter:"
+                android:textSize="24sp" />
+
+            <ScrollView
+                android:layout_width="200dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/modelList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <Switch
+                android:id="@+id/swSort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sort price"
+                android:textSize="20sp"
+                android:trackTint="#083C6A" />
+
+            <Button
+                android:id="@+id/btApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#F6A90B"
+                android:text="@string/apply"
+                android:textColor="#0D0C0C"
+                android:textSize="16sp"
+                android:onClick="btApplyOnClick"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

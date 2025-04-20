@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CobraShopApp</string>
+    <string name="search">Search</string>
+    <string name="home_of_games">Home Of Games</string>
+    <string name="playstation_world">Playstation World</string>
+    <string name="keyboard_mouse_mousepad">KeyBoard . Mouse . MousePad</string>
+    <string name="headphones">Headphones</string>
+    <string name="xbox">XBox</string>
+    <string name="show_list">Show List</string>
+    <string name="right_button">Right Button</string>
+    <string name="left_button">Left Button</string>
+    <string name="cart">Cart</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="search_for_product">Search for product</string>
+    <string name="apply">Apply</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="cash_on_delivery">Cash on delivery</string>
+    <string name="confirm">Confirm</string>
+    <string name="payment_method">Payment Method</string>
+</resources>
