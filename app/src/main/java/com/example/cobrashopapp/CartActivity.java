@@ -55,9 +55,9 @@ public class CartActivity extends AppCompatActivity {
         });
 
 
-//        Intent intent= getIntent();
-//        cartProdName= intent.getStringArrayListExtra("cartProdName");
-//        cartProdType= intent.getStringArrayListExtra("cartProdType");
+        Intent intent= getIntent();
+        cartProdName= intent.getStringArrayListExtra("cartProdName");
+        cartProdType= intent.getStringArrayListExtra("cartProdType");
 
 
         setUpView();

@@ -100,7 +100,7 @@ public class ProductsActivity extends AppCompatActivity {
         }
     }
 
-    //------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
     private void listOfItems(ArrayList<Model> items) {
 
         for (int i=0; i<items.size(); i++){
@@ -222,6 +222,7 @@ public class ProductsActivity extends AppCompatActivity {
 //------------------------------------------------------------------------------------------
     public void btApplyOnClick(View view) {
 
+        sclList.scrollTo(0,0);
         ArrayList<Product>prod= new ArrayList<>();
         ArrayList<Model>tempItems= new ArrayList<>();
 

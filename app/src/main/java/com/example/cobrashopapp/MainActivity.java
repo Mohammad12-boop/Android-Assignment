@@ -156,8 +156,12 @@ public class MainActivity extends AppCompatActivity {
     public void btCartOnClick(View view) {
 
         Intent intent3= new Intent(MainActivity.this, CartActivity.class);
-//        intent3.putStringArrayListExtra("cartProdName", cartProdName);
-//        intent3.putStringArrayListExtra("cartProdType", cartProdType);
+
+        if (!cartProdName.isEmpty() && cartProdType.isEmpty()) {
+
+            intent3.putStringArrayListExtra("cartProdName", cartProdName);
+            intent3.putStringArrayListExtra("cartProdType", cartProdType);
+        }
         startActivity(intent3);
     }
 }
